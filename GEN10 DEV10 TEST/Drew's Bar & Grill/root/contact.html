@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+<!--
+    Name: Andrew Smith
+    Date Created: 3/17/2019
+    Most recent revision: 3/17/2019
+-->
+<html lang="en"> 
+    <head> 
+        
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<title>Contact Us</title>	
+		
+		<!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<style>
+		input[type=text] {
+		border: 2px solid #0d1f2d;
+		width: 50%;
+		padding: 9px 9px;
+		margin: 12px 0;
+		box-sizing: border-box;
+		font-size: 1.2em;
+		}
+		
+		</style>
+		
+		
+	<script>
+	
+	function validate()                                    
+{ 
+    var name = document.forms["myForm"]["name"];               
+    var email = document.forms["myForm"]["email"];    
+    var phone = document.forms["myForm"]["phone"];  
+   
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    }  
+       
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (phone.value == "" || NaN)                           
+    { 
+        window.alert("Please enter your telephone number."); 
+        phone.focus(); 
+        return false; 
+    } 
+	window.alert("Information is Valid!");
+    return true; 
+}
+</script>
+   
+	</head> 
+
+	<body>
+        <header>
+            <h1>Drew's Bar & Grill</h1>
+        </header>
+		<header class="jumbotron">
+			<h2>New Location Opening in May 2019!<h2>
+		</header>
+<hr/>
+        <nav>
+		<a class="btn badge-pill" href="index.html"><i class="material-icons">home</i></a>
+		<a class="btn badge-pill" href="menu.html" >Menu</a>
+		<a class="btn badge-pill" href="" >Contact Us</a>
+        </nav>
+<hr/>
+		<noscript>
+		<h3>JavaScript is Either Disabled or Not Supported!</h3>
+		<h4>This Site is Best Viewed With JavaScript Enabled!</h4>
+		</noscript>
+		
+		<form action="" name= "myForm" onsubmit = "return validate()" method = "post">
+			<label for="name"><strong>Name:</strong></label>
+			<input type="text" id="name" name="name" >
+<br/>
+			<label for="email"><strong>Email:</strong></label>
+			<input type="text" id="email" name="email" >
+<br/>
+			<label for="phone"><strong>Phone:</strong></label>
+			<input type="text" id="phone" name="phone" >
+<br/>
+			<label for="reason">Reason for Inquiry:</label>
+			<select id="reason" name="reason" >
+				<option value="Catering" selected>Catering</option>
+				<option value="privateParty">Private Party</option>
+				<option value="feedback">Feedback</option>
+				<option value="other">Other</option>
+			</select>
+<br/>
+			<label for="info">Additional Information</label>
+			<textarea id="info" name="info"></textarea><br/>
+			
+			
+				<p>Have you been to the restaurant?
+				<label for="answer">No</label>
+				<input type="radio" id="no" name="answer" value="no" checked>
+				<label for="answer">Yes</label>
+				<input type="radio" id="yes" name="answer" value="yes">
+				</p>
+				
+				<p>Best days to contact you:
+				<label for="contactDay">M</label>
+				<input type="checkbox" id="monday" name="contactDay" value="monday">
+				<label for="contactDay">T</label>
+				<input type="checkbox" id="tuesday" name="contactDay" value="tuesday">
+				<label for="contactDay">W</label>
+				<input type="checkbox" id="wednesday" name="contactDay" value="wednesday">
+				<label for="contactDay">Th</label>
+				<input type="checkbox" id="thursday" name="contactDay" value="thursday">
+				<label for="contactDay">F</label>
+				<input type="checkbox" id="friday" name="contactDay" value="friday">
+				</p>	
+				
+				<input type="submit" name="submit" value="Send Request">
+		</form>
+        <footer>
+<hr/>
+		<p>555 Cooper Street, Arlington, Texas, 76010</p>
+		<p>817-555-5555</p>
+        </footer>
+    </body> 
+</html>

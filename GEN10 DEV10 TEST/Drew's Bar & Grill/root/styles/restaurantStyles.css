@@ -1,0 +1,36 @@
+/*
+Creator: Andrew Smith
+Date created: 3/24/2019
+Date last modified: 3/24/2019
+*/
+
+header, footer {
+	background-color: lightblue;
+	text-align:center;
+}
+
+header {
+	font-family: 'Baloo Chettan', cursive;
+}	
+
+nav .btn {
+		background-color: lightblue;
+		color: white;
+		margin-left: 30px;
+		}
+
+nav a:hover {
+font-weight: bold;
+}
+
+nav a:active {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+nav a:visited {
+color: black; }
+
+body {
+	background-color: lightgray;
+}
